@@ -1,0 +1,70 @@
+/* Season Calendar tab */
+.sc{ display:flex; flex-direction:column; gap:14px; }
+.sc-head{ background:#fff; border:1px solid #e9eef5; border-radius:16px; padding:20px 22px; box-shadow:0 1px 3px rgba(15,23,42,0.04); }
+.sc-head h2{ margin:0; font-size:22px; font-weight:800; letter-spacing:-0.025em; color:#1f2937; }
+.sc-head p{ margin:7px 0 0; font-size:13px; color:#64748b; font-weight:600; }
+.sc-event{ font-size:12px; font-weight:800; color:#4a6fa5; background:#eff6ff; border:1px solid #dbeafe; border-radius:999px; padding:3px 10px; margin-left:8px; }
+.sc-phases{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+.sc-phase{ position:relative; background:#fff; border:1px solid #e9eef5; border-radius:14px; padding:12px 14px; display:flex; flex-direction:column; gap:3px; }
+.sc-phase-name{ font-size:13.5px; font-weight:800; color:#1f2937; }
+.sc-phase-range{ font-size:11.5px; color:#94a3b8; font-weight:600; }
+.sc-phase.done{ background:#f8fafc; }
+.sc-phase.done .sc-phase-name{ color:#64748b; }
+.sc-phase.current{ border-color:#4a6fa5; box-shadow:0 0 0 3px rgba(37,99,235,0.1); }
+.sc-phase.current .sc-phase-name{ color:#3d5d8a; }
+.sc-phase.upcoming{ border-style:dashed; }
+.sc-phase-now{ font-size:10px; font-weight:900; color:#4a6fa5; }
+.sc-card{ background:#fff; border:1px solid #e9eef5; border-radius:16px; padding:16px 18px; box-shadow:0 1px 3px rgba(15,23,42,0.04); }
+.sc-card h4{ margin:0 0 2px; font-size:15px; font-weight:800; color:#1f2937; display:flex; align-items:center; gap:8px; }
+.sc-hint{ font-size:10.5px; font-weight:700; color:#94a3b8; }
+.sc-sub{ margin:0 0 10px; font-size:11.5px; color:#94a3b8; font-weight:600; }
+.sc-cols{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.sc-milestones,.sc-meets{ display:flex; flex-direction:column; gap:11px; }
+.sc-milestone,.sc-meet{ display:flex; align-items:center; gap:10px; }
+.sc-dot{ width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.sc-dot.tone-bad{ background:#b0574f; }
+.sc-dot.tone-warn{ background:#a97c46; }
+.sc-dot.tone-good{ background:#4f8a6b; }
+.sc-dot.tone-blue{ background:#4a6fa5; }
+.sc-dot.tone-muted{ background:#94a3b8; }
+.sc-ms-text{ flex:1; display:flex; flex-direction:column; }
+.sc-ms-text b{ font-size:13px; color:#1f2937; }
+.sc-ms-text span{ font-size:11.5px; color:#64748b; font-weight:600; }
+.sc-ms-tag{ font-size:10px; font-weight:900; text-transform:uppercase; letter-spacing:.05em; border-radius:999px; padding:3px 9px; }
+.sc-ms-tag.tone-bad{ background:#fff1f2; color:#b0574f; border:1px solid #fecdd3; }
+.sc-ms-tag.tone-warn{ background:#fffbeb; color:#a97c46; border:1px solid #fde68a; }
+.sc-ms-tag.tone-good{ background:#f0fdf4; color:#4f8a6b; border:1px solid #bbf7d0; }
+.sc-ms-tag.tone-blue{ background:#eff6ff; color:#4a6fa5; border:1px solid #dbeafe; }
+.sc-ms-tag.tone-muted{ background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0; }
+.sc-meet-date{ width:56px; flex-shrink:0; font-size:12px; font-weight:900; color:#4a6fa5; }
+.sc-meet-body{ flex:1; display:flex; flex-direction:column; }
+.sc-meet-body b{ font-size:13px; color:#1f2937; }
+.sc-meet-body span{ font-size:11.5px; color:#64748b; font-weight:600; }
+@media(max-width:1000px){ .sc-phases{ grid-template-columns:repeat(2,1fr); } .sc-cols{ grid-template-columns:1fr; } }
+
+/* Interactive phases + weeks */
+.sc-phase{ font-family:inherit; cursor:pointer; text-align:left; color:inherit; }
+.sc-phase:hover{ border-color:#c7d4e2; }
+.sc-phase.selected{ border-color:#4a6fa5; box-shadow:0 0 0 3px rgba(74,111,165,0.1); }
+.sc-phase.selected .sc-phase-name{ color:#4a6fa5; }
+.sc-phase-detail{ font-size:12.5px; color:#475569; font-weight:600; padding:2px; }
+.sc-phase-stat{ color:#94a3b8; }
+.sc-week-detail{ position:relative; margin-top:10px; display:flex; align-items:center; gap:12px; background:#f6f8fb; border:1px solid #e6ebf1; border-radius:10px; padding:10px 12px; }
+.sc-week-detail b{ font-size:13px; color:#1f2937; }
+.sc-week-stat{ font-size:12px; color:#475569; font-weight:600; }
+.sc-week-phase{ font-size:11.5px; color:#94a3b8; font-weight:600; }
+.sc-week-x{ margin-left:auto; border:none; background:#eef1f5; border-radius:7px; width:24px; height:24px; cursor:pointer; color:#64748b; }
+.sc-ms-tag.tone-slate{ background:#f1f5f9; color:#64748b; border:1px solid #e2e8f0; }
+.sc-dot.tone-slate{ background:#94a3b8; }
+
+/* Compact embedded timeline */
+.sc-compact{ gap:10px; background:#fff; border:1px solid #e6ebf1; border-radius:12px; padding:14px 16px; }
+.sc-compact-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.sc-compact-title{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#94a3b8; }
+.sc-compact-next{ font-size:12px; color:#475569; font-weight:600; }
+.sc-compact-next b{ color:#1f2937; }
+.sc-phases-compact{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+.sc-phases-compact .sc-phase{ padding:8px 12px; }
+.sc-phases-compact .sc-phase-name{ font-size:12.5px; }
+.sc-phases-compact .sc-phase-range{ font-size:11px; }
+.sc-compact .sc-phase-detail{ font-size:12px; }

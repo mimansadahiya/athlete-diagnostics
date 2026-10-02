@@ -1,0 +1,23 @@
+/* Daily check-in — frictionless 2-tap athlete self-report */
+.ci{ background:#fff; border:1px solid #e9eef5; border-radius:16px; padding:14px 16px; box-shadow:0 1px 3px rgba(15,23,42,0.04); }
+.ci-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.ci-head h4{ margin:0; font-size:15px; font-weight:800; color:#1f2937; }
+.ci-time{ font-size:10.5px; font-weight:800; color:#6e6a94; background:#f5f3ff; border:1px solid #ddd6fe; border-radius:999px; padding:3px 9px; }
+.ci-q{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:7px 0; }
+.ci-q label{ font-size:12.5px; font-weight:700; color:#334155; }
+.ci-scale{ display:flex; gap:6px; }
+.ci-tap{ width:36px; height:36px; border-radius:10px; border:1px solid #e2e8f0; background:#fff; font-weight:800; color:#475569; cursor:pointer; font-size:13px; transition:all .12s; }
+.ci-tap:hover{ border-color:#bfdbfe; background:#f8fafc; }
+.ci-tap.on.stress{ background:#ba6b62; border-color:#ba6b62; color:#fff; box-shadow:0 0 0 3px rgba(251,113,133,0.2); }
+.ci-tap.on.fresh{ background:#4f8a6b; border-color:#4f8a6b; color:#fff; box-shadow:0 0 0 3px rgba(22,163,74,0.2); }
+.ci-foot{ display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
+.ci-hint{ font-size:11px; color:#94a3b8; font-weight:600; }
+.ci-submit{ background:#4a6fa5; color:#fff; border:none; border-radius:10px; padding:9px 16px; font-weight:800; font-size:12.5px; cursor:pointer; font-family:inherit; }
+.ci-submit:disabled{ background:#e2e8f0; color:#94a3b8; cursor:not-allowed; }
+.ci-note{ margin:8px 0 0; font-size:10.5px; color:#cbd5e1; font-weight:600; }
+.ci.ci-done{ display:flex; align-items:center; gap:12px; background:#f0fdf4; border-color:#bbf7d0; }
+.ci.ci-done > div{ flex:1; display:flex; flex-direction:column; }
+.ci-check{ width:34px; height:34px; border-radius:50%; background:#4f8a6b; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:900; flex-shrink:0; }
+.ci-done b{ font-size:13.5px; color:#1f2937; }
+.ci-done span{ font-size:12px; color:#475569; }
+.ci-redo{ margin-left:auto; background:none; border:1px solid #bbf7d0; color:#4f8a6b; border-radius:8px; padding:6px 12px; font-weight:800; font-size:12px; cursor:pointer; }

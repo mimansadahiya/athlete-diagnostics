@@ -1,0 +1,66 @@
+/* Squad Plan Board — isolated styles (does not touch existing UI) */
+.spb{ display:flex; flex-direction:column; gap:14px; }
+.spb-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; background:#fff; border:1px solid #e6ebf1; border-radius:16px; padding:18px 20px; }
+.spb-head h2{ margin:0; font-size:20px; font-weight:700; letter-spacing:-0.02em; color:#1f2937; }
+.spb-head p{ margin:6px 0 0; font-size:12.5px; color:#64748b; font-weight:600; }
+.spb-stats{ display:flex; gap:8px; align-items:center; }
+.spb-stats span{ font-size:11.5px; font-weight:700; color:#64748b; background:#f4f6f9; border:1px solid #e6ebf1; border-radius:999px; padding:5px 11px; }
+.spb-stats .spb-flag{ color:#8f6a34; background:#fbf8f2; border-color:#ece0cd; }
+
+.spb-table-wrap{ background:#fff; border:1px solid #e6ebf1; border-radius:16px; overflow:auto; }
+.spb-table{ width:100%; border-collapse:collapse; font-size:12px; }
+.spb-table th{ text-align:left; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#94a3b8; padding:11px 14px; border-bottom:1px solid #eef1f5; white-space:nowrap; background:#fafbfd; }
+.spb-table td{ padding:12px 14px; border-bottom:1px solid #f1f4f8; color:#334155; font-weight:500; vertical-align:top; }
+.spb-table tr:last-child td{ border-bottom:none; }
+.spb-name{ font-weight:700; color:#1f2937; white-space:nowrap; }
+.spb-title{ display:block; font-weight:600; color:#1f2937; }
+.spb-sub{ display:block; font-size:11px; color:#94a3b8; margin-top:2px; }
+.spb-key{ font-size:11.5px; color:#475569; max-width:190px; }
+.spb-mod{ max-width:320px; color:#1f2937; font-weight:600; }
+.spb-mod-detail{ display:flex; flex-direction:column; gap:2px; margin-top:5px; }
+.spb-mod-line{ font-size:11px; color:#64748b; font-weight:500; }
+.spb-sys{ font-weight:700; white-space:nowrap; }
+.spb-sys.ok{ color:#3f7357; }
+.spb-sys.warn{ color:#8f6a34; }
+.spb-sys.bad{ color:#96473f; }
+.spb-flagpill{ display:inline-block; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; border-radius:999px; padding:3px 9px; border:1px solid #e6ebf1; color:#64748b; background:#f8fafc; }
+.spb-flagpill.lvl-critical{ color:#96473f; background:#fbf3f2; border-color:#efdcd9; }
+.spb-flagpill.lvl-warning{ color:#8f6a34; background:#fbf8f2; border-color:#ece0cd; }
+.spb-flagpill.lvl-info{ color:#4a6fa5; background:#f6f8fb; border-color:#dbe4ef; }
+.spb-flagpill.lvl-ok{ color:#3f7357; background:#f2f7f4; border-color:#dce9e1; }
+.spb-row.lvl-critical td:first-child{ box-shadow:inset 3px 0 0 #b0574f; }
+.spb-row.lvl-warning td:first-child{ box-shadow:inset 3px 0 0 #a97c46; }
+.spb-note{ font-size:11px; color:#94a3b8; font-weight:500; margin:0; }
+@media (max-width: 1100px){ .spb-mod{ max-width:220px; } }
+
+/* Overall readiness badges */
+.spb-ready{ display:inline-block; font-size:10.5px; font-weight:700; border-radius:999px; padding:3px 10px; border:1px solid #e6ebf1; white-space:nowrap; }
+.spb-ready.good{ color:#3f7357; background:#f2f7f4; border-color:#dce9e1; }
+.spb-ready.warn{ color:#8f6a34; background:#fbf8f2; border-color:#ece0cd; }
+.spb-ready.bad{ color:#96473f; background:#fbf3f2; border-color:#efdcd9; }
+
+/* Import + actions */
+.spb-import{ display:flex; align-items:center; gap:12px; background:#f8fafc; border:1px dashed #d3dce6; border-radius:12px; padding:12px 14px; }
+.spb-import.done{ background:#f2f7f4; border:1px solid #dce9e1; border-style:solid; }
+.spb-import-btn{ display:inline-flex; align-items:center; gap:7px; background:#1f2937; color:#fff; border:none; border-radius:9px; padding:9px 14px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:inherit; }
+.spb-import-btn:hover{ background:#111827; }
+.spb-import-file{ display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:600; color:#3f7357; }
+.spb-import-hint{ font-size:11.5px; color:#94a3b8; font-weight:500; }
+.spb-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+.spb-accept-all{ display:inline-flex; align-items:center; gap:7px; background:#4a6fa5; color:#fff; border:none; border-radius:9px; padding:9px 15px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:inherit; }
+.spb-accept-all:disabled{ background:#e2e8f0; color:#94a3b8; cursor:not-allowed; }
+.spb-export{ display:inline-flex; align-items:center; gap:7px; background:#fff; color:#334155; border:1px solid #d3dce6; border-radius:9px; padding:9px 15px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:inherit; }
+.spb-export:disabled{ color:#94a3b8; cursor:not-allowed; }
+
+/* Sync badge + accept */
+.spb-sync{ display:inline-flex; align-items:center; gap:4px; margin-top:4px; font-size:9.5px; font-weight:700; color:#8f6a34; background:#fbf8f2; border:1px solid #ece0cd; border-radius:999px; padding:2px 7px; }
+.spb-strike{ text-decoration:line-through; color:#94a3b8 !important; }
+.spb-final{ display:block; font-size:11px; font-weight:700; color:#3f7357; text-transform:uppercase; letter-spacing:.04em; margin-bottom:4px; }
+.spb-mod-line.changed{ color:#1f2937; font-weight:600; }
+.spb-accept-btn{ background:#4a6fa5; color:#fff; border:none; border-radius:8px; padding:6px 14px; font-size:11.5px; font-weight:600; cursor:pointer; font-family:inherit; }
+.spb-accept-btn:disabled{ background:#e2e8f0; color:#94a3b8; cursor:not-allowed; }
+
+/* Native file picker (hidden) + success state */
+.spb-file-input{ display:none; }
+.spb-import-btn.done{ background:#fff; color:#3f7357; border:1.5px solid #6aa384; }
+.spb-import-btn.done:hover{ background:#f2f7f4; }

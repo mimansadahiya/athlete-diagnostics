@@ -1,0 +1,291 @@
+/* ═══════════════════════════════════════════
+   ENTERPRISE POLISH — loaded last, overrides base styles
+   Muted palette · no text-highlight · clean alerts · minimal roster
+   ═══════════════════════════════════════════ */
+
+:root{
+  --ent-ink:#1f2937;
+  --ent-slate:#475569;
+  --ent-muted:#64748b;
+  --ent-line:#e6ebf1;
+  --ent-accent:#4a6fa5;
+  --ent-green:#4f8a6b;
+  --ent-amber:#a97c46;
+  --ent-red:#b0574f;
+}
+
+/* ── Kill all text-highlight / boxy highlight backgrounds ── */
+.mf-readiness-empty-note,
+.cmp-note,
+.test-hint,
+.mf-briefing-context,
+.mf-onboard{
+  background:transparent !important;
+  border:none !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+.mf-onboard{ background:#f8fafc !important; border:1px solid var(--ent-line) !important; padding:12px 14px !important; color:var(--ent-slate) !important; }
+.brief-tag.warn{ background:#f8fafc !important; color:var(--ent-amber) !important; border:1px solid var(--ent-line) !important; }
+.mf-readiness-empty-note{
+  border-left:3px solid var(--ent-amber) !important;
+  padding:6px 12px !important;
+  color:var(--ent-slate) !important;
+  font-weight:600 !important;
+  background:#fbfaf7 !important;
+  border-radius:0 8px 8px 0 !important;
+}
+.cmp-note{
+  border-left:3px solid var(--ent-amber) !important;
+  padding:6px 12px !important;
+  color:var(--ent-slate) !important;
+  background:#fbfaf7 !important;
+  border-radius:0 8px 8px 0 !important;
+  border-top:none !important; border-right:none !important; border-bottom:none !important;
+}
+.mf-briefing-context{
+  color:var(--ent-slate) !important;
+  font-weight:600 !important;
+  border-left:3px solid var(--ent-line) !important;
+  padding:4px 0 4px 12px !important;
+  border-radius:0 !important;
+}
+
+/* ── Enterprise alert banners (shadcn-style) ── */
+.mf-hero-constraint{
+  border-radius:10px !important;
+  border:1px solid var(--ent-line) !important;
+  border-left:3px solid var(--ent-line) !important;
+  background:#fff !important;
+  color:var(--ent-slate) !important;
+  font-weight:600 !important;
+  padding:11px 14px !important;
+}
+.mf-hero-constraint.sev-critical{ background:#fdf6f5 !important; border-color:#efdcd9 !important; border-left-color:var(--ent-red) !important; color:#7a3f39 !important; }
+.mf-hero-constraint.sev-warning{ background:#fbf8f2 !important; border-color:#ece0cd !important; border-left-color:var(--ent-amber) !important; color:#7a5c30 !important; }
+
+.kine-constraint{
+  border-radius:12px !important;
+  border:1px solid var(--ent-line) !important;
+  border-left:3px solid var(--ent-line) !important;
+  background:#fff !important;
+  box-shadow:none !important;
+  padding:14px 16px !important;
+}
+.kine-constraint.sev-critical{ background:#fdf6f5 !important; border-color:#efdcd9 !important; border-left-color:var(--ent-red) !important; }
+.kine-constraint.sev-warning{ background:#fbf8f2 !important; border-color:#ece0cd !important; border-left-color:var(--ent-amber) !important; }
+.kine-constraint.sev-ok{ background:#f7faf8 !important; border-color:#e2ece6 !important; border-left-color:var(--ent-green) !important; }
+.kine-constraint.sev-critical .kine-constraint-title{ color:#7a3f39 !important; }
+.kine-constraint.sev-warning .kine-constraint-title{ color:#7a5c30 !important; }
+.kine-constraint-title{ font-weight:700 !important; letter-spacing:0 !important; }
+.kine-constraint-msg{ color:var(--ent-slate) !important; font-weight:500 !important; }
+.kine-constraint-reasons{ background:transparent !important; border:none !important; padding:0 !important; color:var(--ent-muted) !important; }
+
+/* Systemic load badge — soften */
+.kine-sys-badge{ font-weight:700 !important; letter-spacing:.02em !important; }
+.kine-sys-badge.good{ background:#f2f7f4 !important; color:var(--ent-green) !important; border:1px solid #dce9e1 !important; }
+.kine-sys-badge.warn{ background:#faf6ee !important; color:var(--ent-amber) !important; border:1px solid #ece0cd !important; }
+.kine-sys-badge.bad{ background:#fbf3f2 !important; color:var(--ent-red) !important; border:1px solid #efdcd9 !important; }
+
+/* ── Soften bold fills across banners/pills ── */
+.mf-briefing-badge{ background:#f6f8fb !important; color:var(--ent-accent) !important; border:1px solid var(--ent-line) !important; font-weight:700 !important; letter-spacing:.03em !important; }
+.mf-session-chip{ background:#f6f8fb !important; color:var(--ent-slate) !important; border:1px solid var(--ent-line) !important; font-weight:600 !important; }
+.mf-build-badge,.build-badge{ background:#1f2937 !important; }
+
+/* Readiness banner — pastel, not lime */
+.mf-readiness{
+  background:#f2f7f4 !important;
+  border:1px solid #dce9e1 !important;
+  border-left:3px solid var(--ent-green) !important;
+}
+.mf-readiness.is-empty{ background:#fbf8f2 !important; border-color:#ece0cd !important; border-left-color:var(--ent-amber) !important; }
+.mf-readiness-label{ color:#2f5d43 !important; font-weight:700 !important; }
+.mf-metric{ color:#2f5d43 !important; font-weight:600 !important; }
+.mf-metric em.up{ color:var(--ent-green) !important; }
+.mf-metric em.down{ color:var(--ent-red) !important; }
+
+/* ── Minimal roster list ── */
+.mf-roster{ padding:12px 10px !important; }
+.mf-roster-card,
+.mf-roster-card.compact{
+  border:none !important;
+  border-left:3px solid transparent !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  border-bottom:1px solid #eef1f5 !important;
+  padding:10px 8px 10px 10px !important;
+  gap:10px !important;
+  transform:none !important;
+}
+.mf-roster-card:last-child{ border-bottom:none !important; }
+.mf-roster-card:hover{ background:#f8fafc !important; }
+.mf-roster-card.urg-critical{ border-left-color:var(--ent-red) !important; }
+.mf-roster-card.urg-high{ border-left-color:var(--ent-amber) !important; }
+.mf-roster-card.urg-watch{ border-left-color:#c7d0da !important; }
+.mf-roster-card.urg-ok{ border-left-color:transparent !important; }
+.mf-roster-card.active{ background:#f4f7fb !important; border-left-color:var(--ent-accent) !important; }
+.mf-roster-card .mf-roster-name{ font-weight:600 !important; letter-spacing:0 !important; }
+.mf-test-tag{ display:none !important; }
+.mf-urg-flag{ width:15px; height:15px; font-size:9px; background:var(--ent-red) !important; }
+
+/* Avatar face */
+.mf-avatar-face{ width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; background:#eef1f5; color:#7d8896; }
+.mf-avatar-face.female{ background:#f0eef4; color:#7c7589; }
+
+/* ── Softer buttons ── */
+.mf-filter-btn{ background:var(--ent-accent) !important; box-shadow:none !important; font-weight:600 !important; }
+.cmp-export{ background:var(--ent-accent) !important; box-shadow:none !important; font-weight:600 !important; }
+.kine-btn-primary,.ci-submit{ background:var(--ent-accent) !important; box-shadow:none !important; font-weight:600 !important; }
+.tabs button.on,.mf-tabs button.on{ color:var(--ent-accent) !important; }
+.mf-tabs{ background:#f4f6f9 !important; border-color:var(--ent-line) !important; }
+.mf-tabs button.on{ background:#fff !important; box-shadow:0 1px 2px rgba(31,41,55,0.06) !important; }
+
+/* ── Constraint banner typography ── */
+.mf-briefing-headline{ font-weight:700 !important; }
+.mf-briefing-narrative{ font-weight:400 !important; color:#475569 !important; }
+.mf-briefing-action{ background:#1f2937 !important; }
+.mf-briefing-action-label{ color:#c9d6e5 !important; background:rgba(255,255,255,0.08) !important; border:1px solid rgba(255,255,255,0.14) !important; }
+
+/* Softer section titles */
+.mf-card h4,.sc-card h4,.kine-card h4,.cmp-card h4{ font-weight:700 !important; letter-spacing:0 !important; }
+.mf-roster-head,.kine-head h2,.cmp-head h2,.sc-head h2{ font-weight:700 !important; letter-spacing:-0.01em !important; }
+
+/* Info tooltip keeps working, muted */
+.mf-info{ background:#e6ebf1 !important; color:#5b6673 !important; }
+
+/* ── Hero briefing: plain white, single accent edge ── */
+.mf-briefing{
+  background:#fff !important;
+  border:1px solid var(--ent-line) !important;
+  border-left:3px solid var(--ent-accent) !important;
+  box-shadow:0 1px 3px rgba(31,41,55,0.04) !important;
+}
+
+/* ── Focus items: no highlight, status edge only ── */
+.mf-focus-item{
+  background:#fff !important;
+  border:1px solid var(--ent-line) !important;
+  border-left:3px solid var(--ent-line) !important;
+  border-radius:8px !important;
+  font-weight:500 !important;
+  color:var(--ent-slate) !important;
+}
+.mf-focus-item.lvl-red{ border-left-color:var(--ent-red) !important; }
+.mf-focus-item.lvl-amber{ border-left-color:var(--ent-amber) !important; }
+.mf-focus-item.lvl-violet{ border-left-color:#7d79a3 !important; }
+.mf-focus-item.lvl-green{ border-left-color:var(--ent-green) !important; }
+.mf-focus-item.lvl-slate{ border-left-color:#c7d0da !important; }
+.mf-focus-level{
+  background:transparent !important;
+  color:var(--ent-muted) !important;
+  padding:0 !important;
+  font-weight:700 !important;
+  letter-spacing:.05em !important;
+}
+
+/* Softer stat chips & simple cards */
+.mf-bstat,.mf-simple-card{ border-color:var(--ent-line) !important; }
+.mf-econ-row{ border-color:var(--ent-line) !important; background:#fff !important; }
+.mf-econ-badge{ background:#f6f8fb !important; }
+
+/* Muted chart-adjacent pills */
+.mf-metric,.mf-readiness-metrics em{ font-weight:600 !important; }
+.kine-toggle{ background:#f4f6f9 !important; }
+.kine-toggle button.on{ color:var(--ent-accent) !important; }
+
+/* ── Open typography for the Executive Briefing (no box) ── */
+.mf-briefing{
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  padding:2px 0 4px !important;
+}
+.mf-briefing-badge{
+  background:transparent !important;
+  border:none !important;
+  color:#64748b !important;
+  padding:0 !important;
+  font-size:11px !important;
+}
+.mf-briefing-live{ display:none !important; }
+
+/* Compare embedded in Deep Dive */
+.mf-compare-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
+.mf-compare-embed{ margin-top:8px; }
+
+/* ═══════════════════════════════════════════
+   MICRO-NAVIGATION — ultra-minimal header
+   ═══════════════════════════════════════════ */
+.mf-topbar{ padding:7px 18px !important; }
+.mf-brand-mark{ width:28px !important; height:28px !important; border-radius:8px !important; }
+.mf-brand-name{ font-size:14px !important; font-weight:600 !important; letter-spacing:0 !important; }
+.mf-brand-sub{ font-size:10.5px !important; }
+
+/* Tabs: plain text, underline only when active */
+.mf-tabs{ background:transparent !important; border:none !important; padding:0 !important; gap:20px !important; }
+.mf-tabs button{
+  background:transparent !important; border:none !important; box-shadow:none !important;
+  padding:3px 0 !important; border-radius:0 !important;
+  font-size:12.5px !important; font-weight:500 !important; color:#94a3b8 !important;
+  letter-spacing:.01em !important; line-height:1.5 !important;
+  border-bottom:2px solid transparent !important;
+}
+.mf-tabs button:hover{ color:#64748b !important; }
+.mf-tabs button.on{
+  background:transparent !important; color:#1f2937 !important; font-weight:600 !important;
+  border-bottom:2px solid #4a6fa5 !important; box-shadow:none !important;
+}
+.mf-avatar-lg{ width:28px !important; height:28px !important; font-size:11px !important; }
+
+/* More dropdown */
+.mf-more{ position:relative; }
+.mf-more-btn{
+  display:inline-flex; align-items:center; gap:3px;
+  background:transparent; border:none; color:#64748b; font-size:12.5px; font-weight:600;
+  cursor:pointer; padding:5px 2px; font-family:inherit;
+}
+.mf-more-btn:hover{ color:#1f2937; }
+.mf-more-overlay{ position:fixed; inset:0; z-index:90; }
+.mf-more-menu{
+  position:absolute; right:0; top:calc(100% + 8px); z-index:100;
+  background:#fff; border:1px solid var(--ent-line); border-radius:10px;
+  box-shadow:0 18px 44px rgba(31,41,55,0.16); padding:6px; min-width:186px;
+  display:flex; flex-direction:column;
+}
+.mf-more-menu button{
+  text-align:left; background:transparent; border:none; padding:8px 10px; border-radius:7px;
+  font-size:12.5px; font-weight:600; color:#334155; cursor:pointer; font-family:inherit;
+}
+.mf-more-menu button:hover{ background:#f4f6f9; color:#1f2937; }
+.mf-more-sep{ height:1px; background:var(--ent-line); margin:5px 4px; }
+
+/* Onboard strip: no icon, quieter */
+.mf-onboard{ padding:10px 12px !important; font-size:12.5px !important; }
+
+/* Peaking trajectory chip */
+.mf-peak-chip{ position:relative; font-size:10.5px; font-weight:700; border-radius:999px; padding:4px 10px; border:1px solid #e6ebf1; cursor:default; white-space:nowrap; }
+.mf-peak-chip.tone-good{ color:#3f7357; background:#f2f7f4; border-color:#dce9e1; }
+.mf-peak-chip.tone-warn{ color:#8f6a34; background:#fbf8f2; border-color:#ece0cd; }
+.mf-peak-chip.tone-bad{ color:#96473f; background:#fbf3f2; border-color:#efdcd9; }
+.mf-peak-chip:hover::after{
+  content: attr(data-tip); position:absolute; top:150%; left:0; z-index:80; width:250px;
+  background:#1f2937; color:#fff; padding:9px 11px; border-radius:9px; font-size:11px; font-weight:500;
+  line-height:1.45; white-space:normal; box-shadow:0 14px 34px rgba(31,41,55,0.28);
+}
+.mf-brand-mark svg{ color:#4a6fa5; }
+
+/* Settings modal navigation */
+.mf-pref-nav{ display:flex; flex-direction:column; gap:2px; margin:10px 0 12px; border-top:1px solid var(--ent-line); padding-top:10px; }
+.mf-pref-nav button{ text-align:left; background:transparent; border:none; padding:9px 10px; border-radius:7px; font-size:12.5px; font-weight:600; color:#334155; cursor:pointer; font-family:inherit; }
+.mf-pref-nav button:hover{ background:#f4f6f9; color:#1f2937; }
+
+/* Rail labels so the gear (Settings) is discoverable */
+.mf-rail{ padding:8px 4px; }
+.mf-rail-btn{ width:52px; height:auto; flex-direction:column; gap:2px; padding:6px 2px 5px; }
+.mf-rail-ico{ font-size:15px; line-height:1; }
+.mf-rail-label{ font-size:8.5px; font-weight:700; letter-spacing:.01em; color:inherit; }
+
+/* Clickable readiness metric */
+.mf-simple-btn{ background:none; border:none; padding:0; margin:0; font-family:inherit; cursor:pointer; text-align:left; }
+.mf-simple-btn:hover{ text-decoration:underline; text-decoration-color:#4a6fa5; }

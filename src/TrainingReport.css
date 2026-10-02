@@ -1,0 +1,32 @@
+/* Today's Training Plan — compact, hover for detail */
+.tr{ background:#fff; border:1px solid var(--ent-line); border-radius:12px; padding:12px 14px; box-shadow:0 1px 3px rgba(31,41,55,0.04); }
+.tr-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; }
+.tr-title{ font-size:13.5px; font-weight:700; color:#1f2937; }
+.tr-session{ font-size:11px; font-weight:700; color:var(--ent-slate); background:#f4f6f9; border:1px solid var(--ent-line); border-radius:999px; padding:3px 10px; }
+
+.tr-row{ position:relative; display:flex; align-items:baseline; gap:10px; padding:8px 0; border-top:1px solid #eef1f5; }
+.tr-row:first-of-type{ border-top:none; }
+.tr-label{ width:94px; flex-shrink:0; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#94a3b8; }
+.tr-base{ display:flex; flex-direction:column; }
+.tr-base b{ font-size:13px; font-weight:600; color:#1f2937; }
+.tr-base em{ font-size:11.5px; color:#94a3b8; font-style:normal; }
+.tr-adapt-summary{ font-size:13px; font-weight:700; color:#1f2937; cursor:default; }
+.tr-adapt.lvl-critical .tr-adapt-summary{ color:#96473f; }
+.tr-adapt.lvl-warning .tr-adapt-summary{ color:#8f6a34; }
+.tr-adapt.lvl-info .tr-adapt-summary{ color:#4a6fa5; }
+.tr-adapt.lvl-ok .tr-adapt-summary{ color:#3f7357; }
+.tr-note{ margin:8px 0 0; font-size:10.5px; color:#94a3b8; font-weight:500; }
+
+/* Hover disclosure */
+.tr-hover{
+  position:absolute; top:calc(100% - 2px); left:94px; z-index:30; width:252px;
+  background:#fff; border:1px solid var(--ent-line); border-radius:12px; padding:11px 13px;
+  box-shadow:0 18px 44px rgba(31,41,55,0.18);
+  opacity:0; visibility:hidden; transform:translateY(4px);
+  transition:opacity .15s ease, transform .15s ease; pointer-events:none;
+}
+.tr-row:hover .tr-hover{ opacity:1; visibility:visible; transform:translateY(0); }
+.tr-detail-title{ display:block; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#94a3b8; margin-bottom:7px; }
+.tr-hover ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+.tr-hover li{ display:flex; justify-content:space-between; gap:10px; font-size:12px; color:#475569; font-weight:500; }
+.tr-hover li b{ color:#1f2937; font-weight:700; }

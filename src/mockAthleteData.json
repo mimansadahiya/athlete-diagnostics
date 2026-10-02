@@ -1,0 +1,367 @@
+[
+  {
+    "id": "sarah-j",
+    "name": "Sarah J.",
+    "initials": "SJ",
+    "coach": "Coach Rivera",
+    "event": "Triple Jump",
+    "eventCode": "TJ",
+    "discipline": "Jumps",
+    "gender": "Female",
+    "category": "International",
+    "year": "Junior",
+    "status": "Active",
+    "readiness": 88,
+    "hrv": {
+      "value": 65,
+      "trend": "+5%",
+      "unit": "ms"
+    },
+    "sleep": {
+      "value": 8.2,
+      "trend": "+0.4",
+      "unit": "h",
+      "efficiency": 88
+    },
+    "rpe": {
+      "value": 6,
+      "trend": "0%",
+      "unit": "",
+      "stable": true
+    },
+    "workRestBalance": 0.88,
+    "isHighBetter": true,
+    "peerBaseline": 5.75,
+    "timeSeries": [
+      {
+        "date": "2023-10",
+        "label": "Oct '23",
+        "actual": 3.35,
+        "peer": 5.1,
+        "sway": 72,
+        "heartRate": 85,
+        "stress": 55,
+        "hrv": 55
+      },
+      {
+        "date": "2023-11",
+        "label": "Nov '23",
+        "actual": 4.05,
+        "peer": 5.25,
+        "sway": 95,
+        "heartRate": 84,
+        "stress": 50,
+        "hrv": 56
+      },
+      {
+        "date": "2023-12",
+        "label": "Dec '23",
+        "actual": 4.15,
+        "peer": 5.4,
+        "sway": 150,
+        "heartRate": 80,
+        "stress": 45,
+        "hrv": 60
+      },
+      {
+        "date": "2024-01",
+        "label": "Jan '24",
+        "actual": 4.35,
+        "peer": 5.55,
+        "sway": 105,
+        "heartRate": 79,
+        "stress": 38,
+        "hrv": 61
+      },
+      {
+        "date": "2024-02",
+        "label": "Feb '24",
+        "actual": 5.15,
+        "peer": 5.75,
+        "sway": 62,
+        "heartRate": 77,
+        "stress": 30,
+        "hrv": 63
+      },
+      {
+        "date": "2024-03",
+        "label": "Mar '24",
+        "actual": 5.05,
+        "peer": 5.95,
+        "sway": 92,
+        "heartRate": 82,
+        "stress": 42,
+        "hrv": 58
+      },
+      {
+        "date": "2024-04",
+        "label": "Apr '24",
+        "actual": 5.2,
+        "peer": 6.1,
+        "sway": 55,
+        "heartRate": 79,
+        "stress": 32,
+        "hrv": 61
+      },
+      {
+        "date": "2024-05",
+        "label": "May '24",
+        "actual": 6.85,
+        "peer": 6.25,
+        "sway": 58,
+        "heartRate": 88,
+        "stress": 12,
+        "hrv": 52
+      }
+    ],
+    "interventions": [
+      {
+        "date": "2024-01",
+        "label": "New Lifting Phase",
+        "sub": "(Jan 15)",
+        "color": "#4a6fa5"
+      },
+      {
+        "date": "2024-03",
+        "label": "Academic Midterms",
+        "sub": "(Mar 10)",
+        "color": "#b0574f"
+      },
+      {
+        "date": "2024-04",
+        "label": "Nutritionist Consultation",
+        "sub": "(Apr 20)",
+        "color": "#4f8a6b"
+      }
+    ],
+    "aiAssessment": "SARAH'S MARCH PLATEAU correlates with a measured 15% spike in perceived Academic Stress and decreased sleep efficiency. Neuromuscular sway indicators show early motor control degradation before overall marks dropped. May progression is associated with optimized recovery protocols and stable stress levels.",
+    "econ": [
+      {
+        "bullet": "A",
+        "title": "Academic Midterms \u2192 March plateau",
+        "desc": "DiD ATT = \u22120.15m",
+        "r2": "R\u00b2 = 0.84 between academic load and early-season plateau",
+        "ci": "95% CI [\u22120.21, \u22120.09]",
+        "color": "#b0574f",
+        "bg": "#fff1f2"
+      },
+      {
+        "bullet": "B",
+        "title": "Sway leads mark drop by 2 weeks",
+        "desc": "Granger p = 0.012",
+        "r2": "r = 0.78, 95% CI [0.62, 0.88]",
+        "ci": "Silhouette 0.62",
+        "color": "#6e6a94",
+        "bg": "#f5f3ff"
+      },
+      {
+        "bullet": "C",
+        "title": "Nutritionist rebound",
+        "desc": "+0.24m (Apr\u2192May)",
+        "r2": "Cohen d = 1.12 (large effect)",
+        "ci": "95% CI [+0.16, +0.32]",
+        "color": "#4f8a6b",
+        "bg": "#f0fdf4"
+      }
+    ]
+  },
+  {
+    "id": "jonah-h",
+    "name": "Jonah H.",
+    "initials": "JH",
+    "coach": "Coach Chen",
+    "event": "High Jump",
+    "eventCode": "HJ",
+    "discipline": "Jumps",
+    "gender": "Male",
+    "category": "International",
+    "year": "Sophomore",
+    "status": "Rehab",
+    "readiness": 64,
+    "hrv": {
+      "value": 58,
+      "trend": "-8%",
+      "unit": "ms"
+    },
+    "sleep": {
+      "value": 6.8,
+      "trend": "-0.5",
+      "unit": "h",
+      "efficiency": 78
+    },
+    "rpe": {
+      "value": 7.4,
+      "trend": "+18%",
+      "unit": ""
+    },
+    "workRestBalance": 0.61,
+    "isHighBetter": true,
+    "peerBaseline": 2.1,
+    "timeSeries": [
+      {
+        "date": "2023-10",
+        "label": "Oct '23",
+        "actual": 2.05,
+        "peer": 2.08,
+        "sway": 3.6,
+        "heartRate": 68,
+        "stress": 33,
+        "hrv": 72
+      },
+      {
+        "date": "2023-11",
+        "label": "Nov '23",
+        "actual": 2.07,
+        "peer": 2.09,
+        "sway": 3.8,
+        "heartRate": 70,
+        "stress": 32,
+        "hrv": 70
+      },
+      {
+        "date": "2023-12",
+        "label": "Dec '23",
+        "actual": 2.04,
+        "peer": 2.09,
+        "sway": 4.9,
+        "heartRate": 62,
+        "stress": 48,
+        "hrv": 78
+      },
+      {
+        "date": "2024-01",
+        "label": "Jan '24",
+        "actual": 2.02,
+        "peer": 2.1,
+        "sway": 5.5,
+        "heartRate": 58,
+        "stress": 54,
+        "hrv": 82
+      },
+      {
+        "date": "2024-02",
+        "label": "Feb '24",
+        "actual": 2.03,
+        "peer": 2.1,
+        "sway": 5.2,
+        "heartRate": 60,
+        "stress": 51,
+        "hrv": 80
+      },
+      {
+        "date": "2024-03",
+        "label": "Mar '24",
+        "actual": 2.06,
+        "peer": 2.11,
+        "sway": 4.4,
+        "heartRate": 64,
+        "stress": 42,
+        "hrv": 76
+      },
+      {
+        "date": "2024-04",
+        "label": "Apr '24",
+        "actual": 2.09,
+        "peer": 2.11,
+        "sway": 4.0,
+        "heartRate": 67,
+        "stress": 38,
+        "hrv": 73
+      },
+      {
+        "date": "2024-05",
+        "label": "May '24",
+        "actual": 2.12,
+        "peer": 2.12,
+        "sway": 3.5,
+        "heartRate": 71,
+        "stress": 32,
+        "hrv": 69
+      }
+    ],
+    "interventions": [
+      {
+        "date": "2024-01",
+        "label": "Injury Plateau",
+        "sub": "(Jan 10)",
+        "color": "#b0574f"
+      },
+      {
+        "date": "2024-03",
+        "label": "Physio Intervention",
+        "sub": "(Mar 05)",
+        "color": "#4a6fa5"
+      },
+      {
+        "date": "2024-05",
+        "label": "Return to Play",
+        "sub": "(May 01)",
+        "color": "#4f8a6b"
+      }
+    ],
+    "aiAssessment": "JONAH'S EARLY-SEASON PLATEAU correlates with injury load \u2014 sway elevated to 5.5mm before marks dropped below 2.03m. HRV recovered +12% after the physio intervention, coinciding with a return to 2.12m. Load remains elevated: RPE still +18% versus cohort baseline.",
+    "econ": [
+      {
+        "bullet": "A",
+        "title": "Structural break \u2014 injury plateau",
+        "desc": "Chow p = 0.004",
+        "r2": "R\u00b2 = 0.71 injury load \u2192 performance",
+        "ci": "95% CI [\u22120.06, \u22120.02]",
+        "color": "#b0574f",
+        "bg": "#fff1f2"
+      },
+      {
+        "bullet": "B",
+        "title": "Physio recovery",
+        "desc": "+0.09m (Mar\u2192May)",
+        "r2": "r(HRV, recovery) = 0.81",
+        "ci": "95% CI [+0.04, +0.14]",
+        "color": "#4f8a6b",
+        "bg": "#f0fdf4"
+      },
+      {
+        "bullet": "C",
+        "title": "Cluster migration",
+        "desc": "Developing \u2192 Mid (k=3)",
+        "r2": "Silhouette 0.62 \u2022 p < 0.01",
+        "ci": "95% CI [0.55, 0.69]",
+        "color": "#4a6fa5",
+        "bg": "#eff6ff"
+      }
+    ]
+  },
+  {
+    "id": "case-invalid",
+    "name": "Alex P.",
+    "initials": "AP",
+    "coach": "Coach Rivera",
+    "event": "100m",
+    "eventCode": "100m",
+    "discipline": "Sprints",
+    "gender": "Male",
+    "category": "Domestic",
+    "year": "Freshman",
+    "status": "Incomplete Data",
+    "readiness": null,
+    "hrv": null,
+    "sleep": null,
+    "rpe": null,
+    "workRestBalance": null,
+    "isHighBetter": false,
+    "peerBaseline": 11.1,
+    "timeSeries": [],
+    "interventions": [],
+    "aiAssessment": "INSUFFICIENT DATA for causal synthesis. Missing sleep/HRV biometrics and no performance history, so no difference-in-differences estimate or cluster assignment can be computed. Collect at least 3 weeks of baseline before assessment.",
+    "econ": [
+      {
+        "bullet": "\u2014",
+        "title": "Insufficient n for inference",
+        "desc": "n < 3 time points",
+        "r2": "No confidence interval estimable",
+        "ci": "Collect 3 wks baseline",
+        "color": "#64748b",
+        "bg": "#f8fafc"
+      }
+    ]
+  }
+]
